@@ -1,8 +1,10 @@
-# packer-oraclelinux-7
+# OracleLinux7.1-Oracle12cRelease2
 
 Builds an Oracle Linux 7 Installation for VirtualBox and Vmware (Untested) using packer and vagrant.
 
-Template is based on https://github.com/dbehnke/packer-oraclelinux-7.git
+Template is based on 
+- https://github.com/dbehnke/packer-oraclelinux-7
+- https://github.com/dbehnke/oracle12c-vagrant
 
 ## Prerequisites
 
@@ -19,7 +21,7 @@ Template is based on https://github.com/dbehnke/packer-oraclelinux-7.git
 
         $ mv V74844-01.iso iso/OracleLinux-R7-U0-Server-x86_64-dvd.iso
 
-4.2 VBoxGuestAdditions.iso (find the right version for your VirtualBox installation)
+4.2 VBoxGuestAdditions.iso (find the right version for your VirtualBox installation). Link: http://download.virtualbox.org/virtualbox/{version}/VBoxGuestAdditions-{version}.iso 
         
         $ mv VBoxGuestAdditions-{current version}.iso iso/VBoxGuestAdditions.iso
 
@@ -76,7 +78,7 @@ ready to `vagrant up` your first virtual environment! Please read
 the comments in the Vagrantfile as well as documentation on
 `vagrantup.com` for more information on using Vagrant.
 
-ek2046@ws-ek2046-lt:/data/vagrant_vms/ol7-test$ vagrant up
+$ vagrant up
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Clearing any previously set forwarded ports...
 ==> default: Clearing any previously set network interfaces...
@@ -102,4 +104,4 @@ Last login: Sat Nov 14 01:52:39 2015 from 10.0.2.2
 [vagrant@localhost ~]$ cat /etc/redhat-release
 Red Hat Enterprise Linux Server release 7.1 (Maipo)
 ```
-# oraclelinux-7.1-oracle12c
+# OracleLinux7.1-Oracle12cRelease2
