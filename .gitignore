@@ -1,0 +1,4 @@
+# Ignore iso and zip files
+*.iso
+*.zip
+*.box
