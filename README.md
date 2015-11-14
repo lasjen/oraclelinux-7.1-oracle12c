@@ -15,17 +15,20 @@ Template is based on https://github.com/dbehnke/packer-oraclelinux-7.git
 4. Oracle Linux 7.1 ISO - https://edelivery.oracle.com/linux
    Download the OS installation files (and place in folder "iso"):
    - OracleLinux-R7-U0-Server-x86_64-dvd.iso 
-     wget https://edelivery.oracle.com/osdc/download?fileName=V74844-01.iso&token=OTBpcVkyeHJVRVFjS0NzekNBdGEvQSE6OiF1c2VybmFtZT1FUEQtTEFTU0UuSkVOU1NFTkBFVlJZLkNPTSZ1c2VySWQ9NjUxNDkyNyZjYWxsZXI9U2VhcmNoU29mdHdhcmUmY291bnRyeUlkPU5PJmVtYWlsQWRkcmVzcz1sYXNzZS5qZW5zc2VuQGV2cnkuY29tJmZpbGVJZD03ODAzOTUzOCZhcnU9MTg2ODkzODgmYWdyZWVtZW50SWQ9NjI0MDI1JnNvZnR3YXJlQ2lkcz0xNDg3MzImcGxhdGZvcm1DaWRzPTYwJnByb2ZpbGVJbnN0YW5jZUNpZD0zMzcxOTImbWVkaWFDaWQ9MzM3MDY4
-     mv V74844-01.iso iso/OracleLinux-R7-U0-Server-x86_64-dvd.iso
+   $ wget https://edelivery.oracle.com/osdc/download?fileName=V74844-01.iso&token=OTBpcVkyeHJVRVFjS0NzekNBdGEvQSE6OiF1c2VybmFtZT1FUEQtTEFTU0UuSkVOU1NFTkBFVlJZLkNPTSZ1c2VySWQ9NjUxNDkyNyZjYWxsZXI9U2VhcmNoU29mdHdhcmUmY291bnRyeUlkPU5PJmVtYWlsQWRkcmVzcz1sYXNzZS5qZW5zc2VuQGV2cnkuY29tJmZpbGVJZD03ODAzOTUzOCZhcnU9MTg2ODkzODgmYWdyZWVtZW50SWQ9NjI0MDI1JnNvZnR3YXJlQ2lkcz0xNDg3MzImcGxhdGZvcm1DaWRzPTYwJnByb2ZpbGVJbnN0YW5jZUNpZD0zMzcxOTImbWVkaWFDaWQ9MzM3MDY4
+   $ mv V74844-01.iso iso/OracleLinux-R7-U0-Server-x86_64-dvd.iso
 
-   - VBoxGuestAdditions.iso (find the right version for your VirtualBox installation)
-     mv VBoxGuestAdditions-{current version}.iso iso/VBoxGuestAdditions.iso
-   
+  - VBoxGuestAdditions.iso (find the right version for your VirtualBox installation)
+  $ mv VBoxGuestAdditions-{current version}.iso iso/VBoxGuestAdditions.iso
 
 5. Download the Oracle RDBMS installation files (and place in folder "database_installer/source")
    https://edelivery.oracle.com/akam/otn/linux/oracle12c/121020/linuxamd64_12102_database_1of2.zip
    https://edelivery.oracle.com/akam/otn/linux/oracle12c/121020/linuxamd64_12102_database_2of2.zip
    https://updates.oracle.com/Orion/Services/download/p21359755_121020_Linux-x86-64.zip?aru=19194568&patch_file=p21359755_121020_Linux-x86-64.zip
+
+  $ mv linuxamd64_12102_database_1of2.zip database_installer/source/.
+  $ mv linuxamd64_12102_database_2of2.zip database_installer/source/.
+  $ mv p21359755_121020_Linux-x86-64.zip database_installer/source/.
 
 ## Build Instructions
 
